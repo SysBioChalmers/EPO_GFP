@@ -1,0 +1,9 @@
+{
+	"n_targets": 179979,
+	"n_bootstraps": 0,
+	"n_processed": 73855950,
+	"kallisto_version": "0.43.1",
+	"index_version": 10,
+	"start_time": "Fri May 25 18:40:08 2018",
+	"call": "kallisto quant --rf-stranded -i /Users/rasools/Box Sync/phd/ppf/35_samples/35samples_index/generatedIndexFile/35samples_index -o /Users/rasools/Box Sync/phd/ppf/35_samples/kallisto_outputs_2/NG-13186_EPOB9_I_lib197979_5477_8 /Volumes/rls/t/35_samples/EPOB9/NG-13186_EPOB9_I_lib197979_5477_8_1.fastq.gz /Volumes/rls/t/35_samples/EPOB9/NG-13186_EPOB9_I_lib197979_5477_8_2.fastq.gz"
+}
