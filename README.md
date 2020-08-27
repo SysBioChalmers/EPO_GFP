@@ -1,6 +1,6 @@
 # Transcriptome analysis of EPO- and GFP-producing HEK293 Cell-lines
 Relative scripts and files to Manuscript:
-<<link to biorxive>>
+link to biorxive
 
 The  data needed to reproduce the results of the manuscript are available at https://doi.org/XXX.
 
