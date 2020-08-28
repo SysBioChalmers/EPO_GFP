@@ -1,5 +1,30 @@
 # Differential expression analysis by deseq2
 # 
+# sessionInfo()
+  # R version 4.0.0 (2020-04-24)
+  # Platform: x86_64-apple-darwin17.0 (64-bit)
+  # Running under: macOS Catalina 10.15.6
+
+  # Matrix products: default
+  # BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+  # LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+
+  # locale:
+  # [1] C/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+  # attached base packages:
+  # [1] parallel  stats4    stats     graphics  grDevices utils    
+  # [7] datasets  methods   base     
+
+  # other attached packages:
+  #  [1] snowfall_1.84-6.1           snow_0.4-3                 
+  #  [3] biomaRt_2.44.0              piano_2.4.0                
+  #  [5] ggplot2_3.3.0               DESeq2_1.28.1              
+  #  [7] SummarizedExperiment_1.18.1 DelayedArray_0.14.0        
+  #  [9] matrixStats_0.56.0          Biobase_2.48.0             
+  # [11] GenomicRanges_1.40.0        GenomeInfoDb_1.24.0        
+  # [13] IRanges_2.22.2              S4Vectors_0.26.1           
+  # [15] BiocGenerics_0.34.0  
 # 
 # Rasool Saghaleyni   2020-08-25
 ####################################################################
