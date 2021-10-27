@@ -27,7 +27,6 @@
 ####################################################################
 
 # *** CHANGE THIS PATH TO REPOSITORY PATH IN YOUR LOCAL COMPUTER ***
-pathToEpoGfp <- '/path/to/local/epo_gfp_repo/'
 
 library(biomaRt)
 library(dplyr)
@@ -40,23 +39,26 @@ library(piano)
 mart <- useMart("ENSEMBL_MART_ENSEMBL", dataset = "hsapiens_gene_ensembl", host="www.ensembl.org")
 ensembl2name <- getBM(attributes=c("ensembl_gene_id","external_gene_name"),mart=mart)
 
-# import tpms
-tpm <- read.delim(paste(pathToEpoGfp,'data/35samples_TPM.txt',sep=''))
-
-# import sam table
-  sam <- read.delim(paste(pathToEpoGfp,'data/samples_for_correlation_analysis.txt',sep=''))
+# import samples table
+  sam <- read.delim(paste(getwd(),'/data/samples_for_correlation_analysis.txt',sep=''))
   rownames(sam) <- sam[,1]
   sam <- sam[,2:17]
   samples_epo <- sam[,grep('EPO',colnames(sam))]
   samples_epo['epoQP',] <- samples_epo['productivity',]
   samples_gfp <- sam[,grep('GFP',colnames(sam))]
   samples_gfp['gfpQP',] <- samples_gfp['productivity',]
+  
+# import TPMs
+tpm <- read.delim(paste(getwd(),'/data/35samples_TPM.txt',sep=''))
+rownames(tpm) <- tpm[,1]
+tpm <- tpm[,-1]
+colnames(tpm) = rep(colnames(sam), times = c(2,2,2,2,2,3,2,2,2,2,4,2,2,2,2,2))
 
-# prepreation for correlation analysis
+# preparation for correlation analysis
   y_epo <- tpm[,colnames(samples_epo)]
   y_gfp <- tpm[,colnames(samples_gfp)]
 
-method = "pearson"
+method = "spearman"
 # correlation analysis
   corel <- matrix(nrow=nrow(y_gfp), ncol=4)
   for(i in 1:nrow(y_gfp)) {
@@ -107,7 +109,7 @@ method = "pearson"
     sig <- sig[!duplicated(sig$external_gene_name),]
 
 # saving table
-  write.table(sig[, c(1)], paste(pathToEpoGfp,'results/',"/Users/rasools/Desktop/35samples_corel_pear_epo_thr_",th,".txt",sep=""), quote = FALSE, row.names = FALSE, col.names = FALSE, , sep='\t') 
+write.table(sig, paste(getwd(),'/results/',"35samples_corel_spearman_epo_thr_",th,".txt",sep=""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep='\t') 
 
 
 
