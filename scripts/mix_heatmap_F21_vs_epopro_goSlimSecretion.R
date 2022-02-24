@@ -37,7 +37,7 @@
 
 # *** CHANGE THIS PATH TO REPOSITORY PATH IN YOUR LOCAL COMPUTER ***
 
-pathToEpoGfp <- '/path/to/local/epo_gfp_repo/'
+pathToEpoGfp <- '/Users/rasools/drive/projects/EPO_GFP/EPO_GFP_github/'
 
 library("ggplot2")
 library("reshape2")
@@ -223,6 +223,9 @@ for (i in 1:length(rownames(mix_fig))) {
 
 mix_fig <- as.data.frame(mix_fig)
 mix_fig$EPOpoly <- NULL
+
+write.table(mix_fig, 'results/heatmap_mix_f21_goSlimSecretion_2.txt', 
+            quote = FALSE, row.names = TRUE, col.names = TRUE, sep='\t') 
 
 df <- mix_fig
 df$Name <- rownames(df)
