@@ -37,8 +37,6 @@
 
 # *** CHANGE THIS PATH TO REPOSITORY PATH IN YOUR LOCAL COMPUTER ***
 
-pathToEpoGfp <- '/Users/rasools/drive/projects/EPO_GFP/EPO_GFP_github/'
-
 library("ggplot2")
 library("reshape2")
 library("dplyr")
