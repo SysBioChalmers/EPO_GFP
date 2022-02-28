@@ -24,11 +24,9 @@
 # [13] tidyverse_1.3.0    ggrepel_0.8.2      dplyr_0.8.5       
 # [16] reshape2_1.4.4     ggplot2_3.3.0   
 # 
-# Rasool Saghaleyni   2020-08-25
 ####################################################################
 
 # *** CHANGE THIS PATH TO REPOSITORY PATH IN YOUR LOCAL COMPUTER ***
-pathToEpoGfp <- '/path/to/local/epo_gfp_repo/'
 
 library("ggplot2")
 library("reshape2")
@@ -42,8 +40,8 @@ library("cowplot")
 library("ggpubr")
 library('RColorBrewer')
 
-epo <- read.delim(paste(pathToEpoGfp,'results/epo_vs_cnt_pairwise_IPA_l2fc_0.58_padj_0.05.txt',sep=''))
-gfp <- read.delim(paste(pathToEpoGfp,'results/gfp_vs_cnt_pairwise_IPA_l2fc_0.58_padj_0.05.txt',sep=''))
+epo <- read.delim('results/epo_vs_cnt_pairwise_IPA_l2fc_0.58_padj_0.05.txt')
+gfp <- read.delim('results/gfp_vs_cnt_pairwise_IPA_l2fc_0.58_padj_0.05.txt')
 
 all <- merge(epo, gfp, by.x=1, by.y=1, all.x=TRUE, all.y=TRUE) #merge epo & gfp
 all <- all[ ,c(1,5,3,2,4,6,7,9,8,11,12,10,13)] #make order of columns the same order as productivity
@@ -86,6 +84,6 @@ ggplot(data = melted_df, aes(x = variable, y = Canonical.Pathways)) +
     ) + 
   scale_x_discrete(position = "bottom") +
   scale_y_discrete(labels = wrap_format(70), position = "right") +
-  scale_fill_gradientn(colours = rev(brewer.pal(n = 9, name = "YlOrRd")),na.value = "lightgoldenrodyellow",limits=c(0,0.1)) +
-ggsave(paste(pathToEpoGfp,'results/heatmap_pro_vs_cnt_pairwise.svg',sep=''), bg = "transparent", width=20, height=10, units="cm")
+  scale_fill_gradientn(colours = rev(brewer.pal(n = 9, name = "YlOrRd")),na.value = "lightgoldenrodyellow",limits=c(0,0.1))
+ggsave('results/heatmap_pro_vs_cnt_pairwise.svg', bg = "transparent", width=20, height=10, units="cm")
 
