@@ -2,7 +2,7 @@
 Relative scripts and files to Manuscript:
 link to biorxive
 
-The  data needed to reproduce the results of the manuscript are available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4004264.svg)](https://doi.org/10.5281/zenodo.4004264)
+The  data needed to reproduce the results of the manuscript are available at [![DOI](https://zenodo.org/badge/290705446.svg)](https://zenodo.org/badge/latestdoi/290705446)
 
 
 ## Repository organisation
