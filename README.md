@@ -1,13 +1,8 @@
-[![DOI](https://zenodo.org/badge/290705446.svg)](https://zenodo.org/badge/latestdoi/290705446)
 
 # Transcriptome analysis of EPO- and GFP-producing HEK293 Cell-lines
-Relative scripts and files to Manuscript: [![DOI](https://zenodo.org/badge/290705446.svg)](https://zenodo.org/badge/latestdoi/290705446)
-
-
-The  data needed to reproduce the results of the manuscript are available at [![DOI](https://zenodo.org/badge/290705446.svg)](https://zenodo.org/badge/latestdoi/290705446)
+Relative scripts and files to manuscript needed to reproduce the results are available at: [![DOI](https://zenodo.org/badge/290705446.svg)](https://zenodo.org/badge/latestdoi/290705446)
 
 Fastq files for transcriptomics analysis: 
-
 
 ## Repository organisation
 scripts: The folder contains scripts for differential expression, gene set analysis and correlation analysis.
